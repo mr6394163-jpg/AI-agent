@@ -95,7 +95,7 @@ ollama serve
 python main.py
 
 
-### Step 3 — Ask your question
+ Step 3 — Ask your question
 
 
 ask a question (q to quit): What are the vegan options?
@@ -103,7 +103,7 @@ ask a question (q to quit): What are the vegan options?
 
 
 
-## 🐛 Common Errors \& Fixes
+🐛 Common Errors \& Fixes
 
 |Error|Cause|Fix|
 |-|-|-|
@@ -111,9 +111,7 @@ ask a question (q to quit): What are the vegan options?
 |`ChromaDB InvalidArgumentError`|Collection name has spaces|Use underscores: `restaurant\_reviews` not `restaurant reviews`|
 |`mxbai-embed-large` download breaks|Large file + slow connection|Re-run `ollama pull mxbai-embed-large` — it resumes|
 
-\---
-
-## 📁 Project Structure
+📁 Project Structure
 
 
 AI-agent/
@@ -123,7 +121,7 @@ AI-agent/
 └── README.md
 👩‍💻 About
 
-Built by **Nisha** as a self-directed learning project to understand RAG pipelines, local LLMs, and vector databases. All errors were debugged independently.
+Built by Zainab as a self-directed learning project to understand RAG pipelines, local LLMs, and vector databases. All errors were debugged independently.
 
  📄 License
 
