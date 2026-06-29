@@ -5,7 +5,7 @@ A privacy-focused, fully local AI agent that answers questions from custom docum
 This agent lets you ask natural language questions about your own documents and get intelligent, context-aware answers — all running locally on your computer.
 
 🏗️ Architecture
-```
+
 User Question
      ↓
 LangChain (Orchestration)
@@ -17,21 +17,11 @@ ChromaDB (Vector Store — similarity search)
 Ollama LLM (Local Language Model)
      ↓
 Answer
-🛠️ Tech Stack
 
-|Component|Tool|
-|-|-|
-|Framework|LangChain|
-|Vector Database|ChromaDB|
-|Embeddings|`mxbai-embed-large` via Ollama|
-|LLM|Ollama (local)|
-|Language|Python 3.12|
 
-\---
+⚙️ Setup & Installation
 
-## ⚙️ Setup \& Installation
-
-### 1\. Clone the repository
+1. Clone the repository
 
 
 git clone https://github.com/mr6394163-jpg/AI-agent.git
@@ -40,7 +30,7 @@ git clone https://github.com/mr6394163-jpg/AI-agent.git
 cd AI-agent
 
 
-### 2\. Create and activate virtual environment
+2. Create and activate virtual environment
 
 
 python -m venv .venv
@@ -49,31 +39,29 @@ python -m venv .venv
 .venv\\Scripts\\activate
 
 
-&#x20;Linux/Mac
+ Linux/Mac
 source .venv/bin/activate
 
 
-### 3\. Install dependencies
+3. Install dependencies
 
 
 pip install langchain langchain-ollama langchain-chroma chromadb ollama
 
 
-### 4\. Install Ollama
+ 4. Install Ollama
 
 
 
 Download from: https://ollama.com/download
 
-
-
-### 5\. Pull required models
+5. Pull required models
 
 
  Pull embedding model (required)
 ollama pull mxbai-embed-large
 
-# Pull LLM model
+ Pull LLM model
 ollama pull llama3
 
 
@@ -81,15 +69,15 @@ ollama pull llama3
 
 
 
-## ▶️ Running the Agent
+ ▶️ Running the Agent
 
-### Step 1 — Start Ollama server (keep this terminal open)
+ Step 1 — Start Ollama server (keep this terminal open)
 
 
 ollama serve
 
 
-### Step 2 — Run the agent (in a new terminal)
+ Step 2 — Run the agent (in a new terminal)
 
 
 python main.py
@@ -103,13 +91,19 @@ ask a question (q to quit): What are the vegan options?
 
 
 
-🐛 Common Errors \& Fixes
+🐛 Common Errors & Fixes
 
-|Error|Cause|Fix|
-|-|-|-|
-|`WinError 10061 Connection refused`|Ollama not running|Run `ollama serve` in a separate terminal|
-|`ChromaDB InvalidArgumentError`|Collection name has spaces|Use underscores: `restaurant\_reviews` not `restaurant reviews`|
-|`mxbai-embed-large` download breaks|Large file + slow connection|Re-run `ollama pull mxbai-embed-large` — it resumes|
+Error
+
+1) WinError 10061 Connection refused
+   Cause: Ollama not running
+   Fix:   Run `ollama serve` in a separate terminal
+2) ChromaDB InvalidArgumentError
+   Cause: Collection name has spaces
+   Fix:   Use underscores: `restaurant_reviews` not `restaurant reviews`
+3) mxbai-embed-large download breaks
+   Cause:Large file + slow connection
+   Fix:Re-run `ollama pull mxbai-embed-large` — it resumes and reliable and fast internet
 
 📁 Project Structure
 
